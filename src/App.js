@@ -1,29 +1,32 @@
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Book from './components/Book';
+import Category from './components/Category';
 import './App.css';
-import Navbar from './components/Navbar.js';
-import Book from './components/Book.js';
-
 
 const Books = [
-          {
-            id:1,
-            title:"Life is crazy",
-            author:"Tascha"
-        },
-         {
-            id:2,
-            title:"Life is good",
-            author:"Aron Abraham"
-        }
+  {
+    id: '1',
+    title: 'The Midnight Library',
+    author: 'Matt Haig',
+  },
+  {
+    id: '2',
+    title: 'Fooled by Randomness',
+    author: 'Nassim Nicholas Taleb',
+  },
+];
 
-]
-
-const App = () => {
+function App() {
   return (
-       <div>
-         <Navbar />
-         <Book data={Books}/>
-       </div>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Book item={Books} />} />
+        <Route path="/Category" element={<Category />} />
+      </Routes>
+    </div>
   );
-};
+}
 
 export default App;

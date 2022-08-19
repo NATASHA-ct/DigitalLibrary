@@ -1,18 +1,22 @@
-import React from "react";
-import BookList from "./Booklist";
-import Form from "./Form"
+import React from 'react';
+import PropTypes from 'prop-types';
+import BookList from './Booklist';
+import Form from './Form';
 
-const Book= (props) => {
-   return (
-     <ul className="allBooks">
-       {props.data.map((item) => {
-         return (
-           <BookList key={item.id} title={item.title} author={item.author} />
-         );
-       })}
-       <Form />
-       </ul>
-   );
-}
+const Book = (props) => {
+  const { item } = props;
+
+  return (
+    <ul className="allBooks">
+      {item.map((data) => (
+        <BookList key={data.id} title={data.title} author={data.author} />))}
+      <Form />
+    </ul>
+  );
+};
+
+Book.propTypes = {
+  item: PropTypes.string.isRequired,
+};
 
 export default Book;

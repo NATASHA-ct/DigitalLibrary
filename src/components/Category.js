@@ -1,9 +1,7 @@
 const Category = () => (
-  <select>
-    <option value = "category">
-        Category
-    </option>
-  </select>
+  <button type="button">
+    checkstatus
+  </button>
 );
 
 export default Category;
