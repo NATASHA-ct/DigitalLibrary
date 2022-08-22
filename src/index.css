@@ -36,7 +36,6 @@ body {
   background-color: var(--palegrey);
 }
 
-
 /* contents */
 .App {
   width: 80%;
@@ -107,7 +106,6 @@ a {
   align-items: center;
   gap: 1em;
 }
-
 
 /* Form area */
 .Line {
