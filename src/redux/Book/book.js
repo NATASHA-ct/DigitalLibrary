@@ -1,24 +1,24 @@
-import { v4 as rid } from "uuid";
+import { v4 as rid } from 'uuid';
 
-const LOAD = "bookStore/book/LOAD_BOOK";
-const ADD = "bookStore/book/ADD_BOOK";
-const REMOVE = "bookStore/book/REMOVE_Book";
+const LOAD = 'bookStore/book/LOAD_BOOK';
+const ADD = 'bookStore/book/ADD_BOOK';
+const REMOVE = 'bookStore/book/REMOVE_Book';
 
 const newBook = [
   {
     id: rid(),
-    title: "Atomic Habits",
-    author: "James Clear",
+    title: 'Atomic Habits',
+    author: 'James Clear',
   },
   {
     id: rid(),
-    title: "Best Self",
-    author: "Mike Bayer",
+    title: 'Best Self',
+    author: 'Mike Bayer',
   },
   {
     id: rid(),
-    title: "12 Rules For Life",
-    author: "Suzanne Collins",
+    title: '12 Rules For Life',
+    author: 'Suzanne Collins',
   },
 ];
 

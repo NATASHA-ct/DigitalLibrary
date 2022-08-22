@@ -1,6 +1,6 @@
 /*eslint-disable */
 import { useDispatch } from "react-redux";
-import { addBook } from "../../redux/Book/book";
+import { addBook } from "../redux/Book/book";
 
 const Form = () => {
   const dispatch = useDispatch();

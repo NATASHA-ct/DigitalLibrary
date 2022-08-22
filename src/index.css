@@ -56,7 +56,7 @@ a{
   background-color:var(--white);
   gap:2.6rem;
   align-items: center;
-  padding: 0 6.25rem;
+  padding: 0 4.25rem;
 }
 
 .mainhg{
@@ -92,22 +92,22 @@ a{
 .allBooks{
     display: flex;
     flex-direction: column;
-    margin: 2.313rem 6.25rem ;
+    margin: 2.313rem 4.25rem;
     gap:0.938rem
 
 }
 
-.allBooks li{
+.bookItem{
   display:flex;
   padding:2rem 9.188rem 1.625rem 1.688rem;
-  height: 10em;
-  border-radius: 4px;
-  border: solid 1px var(--white);
   height: 10.625rem;
   border-radius: 4px;
   border: solid 1px var(--grey);
   background-color:var(--white);
+  align-items: center;
+  gap:1em;
 }
+
 
 /* Form area */
 .Line {

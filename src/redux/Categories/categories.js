@@ -1,9 +1,9 @@
-const CHECK = "bookStore/categories/CHECK";
+const CHECK = 'bookStore/categories/CHECK';
 
 export const categoriesReducer = (state = [], action = {}) => {
   switch (action.type) {
     case CHECK:
-      return "under construction";
+      return 'under construction';
     default:
       return state;
   }
