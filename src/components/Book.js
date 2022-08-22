@@ -1,22 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shallowEqual, useSelector } from "react-redux";
 import BookList from './Booklist';
 import Form from './Form';
 
-const Book = (props) => {
-  const { item } = props;
+const Book = () => {
+  const newBook = useSelector((state) => state.books, shallowEqual);
 
   return (
     <ul className="allBooks">
-      {item.map((data) => (
-        <BookList key={data.id} title={data.title} author={data.author} />))}
+      {newBook.map((data) => (
+        <BookList
+          key={data.id}
+          id={data.id}
+          title={data.title}
+          author={data.author}
+        />
+      ))}
       <Form />
     </ul>
   );
-};
-
-Book.propTypes = {
-  item: PropTypes.string.isRequired,
 };
 
 export default Book;
