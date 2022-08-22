@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
 body {
   width: 100%;
   color: #000;
-  background-color:var(--palegrey);
+  background-color: var(--palegrey);
 }
 
 *,
@@ -12,32 +14,32 @@ body {
   padding: 0;
 }
 
-/*useful variables */
+/* useful variables */
 :root {
-  --textgrey:#888888;
+  --textgrey: #888;
   --grey: #e8e8e8;
   --palegrey: #f5f6fa;
-  --white:#fff;
-  --black:#121212;
-  --ringtop:#307bbe; 
-  --ringbottom:#379cf6;
-  --bktxtblue:#4386bf;
-  --azure:#0290ff;
-  --bklstfont:RobotoSlab;
-  --formfont:Montserrat;
+  --white: #fff;
+  --black: #121212;
+  --ringtop: #307bbe;
+  --ringbottom: #379cf6;
+  --bktxtblue: #4386bf;
+  --azure: #0290ff;
+  --bklstfont: 'Roboto Slab', serif;
+  --formfont: 'Montserrat', sans-serif;
 }
 
 /* Main website container the root */
-#root{
+#root {
   display: flex;
   align-items: center;
-   background-color:var(--palegrey);
+  background-color: var(--palegrey);
 }
 
 
 /* contents */
-.App{
-  width:80%;
+.App {
+  width: 80%;
   margin: 4em auto 4em auto;
   border-radius: 3px;
   box-shadow: 30px 30px 90px #888888a8;
@@ -45,22 +47,21 @@ body {
   padding-bottom: 16rem;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 /* Navbar styles */
-.navbar{
+.navbar {
   display: flex;
   height: 5.938rem;
-  background-color:var(--white);
-  gap:2.6rem;
+  background-color: var(--white);
+  gap: 2.6rem;
   align-items: center;
   padding: 0 4.25rem;
 }
 
-.mainhg{
-  color: var(--navblue);
+.mainhg {
   width: 15rem;
   height: 2.313rem;
   font-family: var(--formfont);
@@ -69,43 +70,42 @@ a{
   color: var(--azure);
 }
 
-.navbook{
+.navbook {
   width: 3.688rem;
   height: 1rem;
   font-family: var(--bklstfont);
   font-size: 0.813rem;
   letter-spacing: 1.9px;
-  color:var(--black);
+  color: var(--black);
 }
 
-.navcate{
+.navcate {
   width: 6.563rem;
   height: 1rem;
   opacity: 0.5;
-  font-family:var(--bklstfont);
+  font-family: var(--bklstfont);
   font-size: 0.813rem;
   letter-spacing: 1.9px;
-  color:var(--black);
+  color: var(--black);
 }
 
 /* books area */
-.allBooks{
-    display: flex;
-    flex-direction: column;
-    margin: 2.313rem 4.25rem;
-    gap:0.938rem
-
+.allBooks {
+  display: flex;
+  flex-direction: column;
+  margin: 2.313rem 4.25rem;
+  gap: 0.938rem;
 }
 
-.bookItem{
-  display:flex;
-  padding:2rem 9.188rem 1.625rem 1.688rem;
+.bookItem {
+  display: flex;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
   height: 10.625rem;
   border-radius: 4px;
   border: solid 1px var(--grey);
-  background-color:var(--white);
+  background-color: var(--white);
   align-items: center;
-  gap:1em;
+  gap: 1em;
 }
 
 
@@ -117,18 +117,18 @@ a{
   padding: 0 6.25rem;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
-  gap:1.188rem;
+  gap: 1.188rem;
   width: 98%;
 }
 
-.form-hd{
-  width:90%;
+.form-hd {
+  width: 90%;
   height: 1.5rem;
   margin: 1.813rem 32.75rem 1.188rem 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
@@ -136,38 +136,39 @@ a{
 }
 
 /* all inputs */
-.all-inputs{
+.all-inputs {
   display: flex;
-  gap:1.5rem;
+  gap: 1.5rem;
   width: 100%;
 }
 
-.inputTittle, .inputCategories{
+.inputTittle,
+.inputCategories {
   height: 2.813rem;
   border-radius: 4px;
   border: solid 1px var(--grey);
-  background-color:var(--white);
-  width:40%;
-  padding-left:1em;
-  color:#c4c4c4;
-  font-family: Montserrat;
+  background-color: var(--white);
+  width: 40%;
+  padding-left: 1em;
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   letter-spacing: -0.15px;
 }
 
-.catoption{
-  margin-right:0.5em;
+.catoption {
+  margin-right: 0.5em;
 }
 
-button{
+button {
   border: #0290ff;
   border-radius: 3px;
   background-color: var(--azure);
-  color:var(--white);
-  font-family: RobotoSlab;
+  color: var(--white);
+  font-family: 'Roboto Slab', serif;
 }
 
-.addbtn{
+.addbtn {
   width: 11.5rem;
   font-size: 0.813rem;
   font-weight: bold;
