@@ -171,3 +171,17 @@ button {
   font-size: 0.813rem;
   font-weight: bold;
 }
+
+/* category page */
+.statusBtn{
+  padding: 6px;
+  margin-left: 3rem;
+  margin-top: 6rem;
+}
+
+.catHeader{
+  color: var(--textgrey);
+  margin-left: 3rem;
+  margin-top: 6rem;
+  font-weight: 300;
+}
