@@ -140,7 +140,12 @@ a {
   width: 100%;
 }
 
+input::placeholder {
+  color: #c4c4c4;
+}
+
 .inputTittle,
+.inputAuthor,
 .inputCategories {
   height: 2.813rem;
   border-radius: 4px;
@@ -148,7 +153,7 @@ a {
   background-color: var(--white);
   width: 40%;
   padding-left: 1em;
-  color: #c4c4c4;
+  color: var(--black);
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   letter-spacing: -0.15px;
