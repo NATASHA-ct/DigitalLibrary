@@ -1,14 +1,24 @@
 /*eslint-disable */
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addBook } from "../redux/Book/book";
+import { v4 as rid } from "uuid";
 
 const Form = () => {
   const dispatch = useDispatch();
+    const [titleName, setTitle] = useState("");
+    const [authorName, setAuthor] = useState("");
   const addBookHandler = (e) => {
     e.preventDefault();
-    const title = e.target[0].value;
-    const author = e.target[1].value;
-    dispatch(addBook(title, author));
+    const book = {
+      id: rid(),
+      title: titleName,
+      author: authorName,
+      category: "not categorized yet",
+    };
+    dispatch(addBook(book));
+    setTitle("");
+    setAuthor("");
   };
   return (
     <div className="formcontainer">
@@ -17,10 +27,21 @@ const Form = () => {
         <h2 className="form-hd">ADD A NEW BOOK</h2>
         <div className="all-inputs">
           <input
-            onChange={() => {}}
+            value={titleName}
+            onInput={(e) => setTitle(e.target.value)}
             className="inputTittle"
             type="text"
             placeholder="Book title"
+            required=""
+          />
+
+          <input
+            value={authorName}
+            onInput={(e) => setAuthor(e.target.value)}
+            className="inputAuthor"
+            type="text"
+            placeholder="Book Author"
+            required=""
           />
 
           <select

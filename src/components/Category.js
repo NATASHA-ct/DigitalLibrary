@@ -6,15 +6,17 @@ const Category = () => {
   const categories = useSelector((state) => state.categories, shallowEqual);
   const checkHandler = () => {
     dispatch(checkStatus());
-    const h2 = document.querySelector('.catHeader');
-    h2.innerHTML = categories;
   };
+  const Button = (
+    <button className="statusBtn" type="button" onClick={checkHandler}>
+      Check status
+    </button>
+  );
+
   return (
     <div>
-      <h2 className="catHeader"> </h2>
-      <button className="statusBtn" type="button" onClick={checkHandler}>
-        Check status
-      </button>
+      <h2 className="catHeader">{categories}</h2>
+      {Button}
     </div>
   );
 };

@@ -1,14 +1,19 @@
-import React from 'react';
-import { shallowEqual, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadBook } from '../redux/Book/book';
 import BookList from './Booklist';
 import Form from './Form';
 
 const Book = () => {
-  const newBook = useSelector((state) => state.books, shallowEqual);
+  const item = useSelector((state) => state.books);
+  const tascha = useDispatch();
+  useEffect(() => {
+    tascha(loadBook());
+  }, []);
 
   return (
     <ul className="allBooks">
-      {newBook.map((data) => (
+      {item.item.map((data) => (
         <BookList
           key={data.id}
           id={data.id}
