@@ -10,6 +10,9 @@ const Navbar = () => (
     <NavLink className="navcate" to="/Category">
       CATEGORIES
     </NavLink>
+    <div className="Oval">
+      <div className="Mask" />
+    </div>
   </div>
 );
 
