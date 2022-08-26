@@ -19,6 +19,7 @@ const Book = () => {
           id={data.id}
           title={data.title}
           author={data.author}
+          category={data.category}
         />
       ))}
       <Form />
