@@ -11,7 +11,7 @@ The Bookstore is a website , it allows the user to: Display a list of books. Add
 
 ## Live Demo in progress , web app to be deployed...()
 
-[Live Demo Link]()
+[Live Demo Link](https://deft-seahorse-76e953.netlify.app/)
 
 ### Setup
 - To clone the repository run `https://github.com/NATASHA-ct/bookstore.git` in your terminal
@@ -33,7 +33,9 @@ Launches the test runner in the interactive watch
 - Set up linter > Lighthouse .
 ,Stylelint ,
 - Added Eslint
-- REACT
+- REACT and redux installations
+- npm install to add dependencies after cloning
+- npm start to view website in browser
 
 
 ## Authors

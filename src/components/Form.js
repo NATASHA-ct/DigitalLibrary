@@ -4,17 +4,20 @@ import { useDispatch } from "react-redux";
 import { addBook } from "../redux/Book/book";
 import { v4 as rid } from "uuid";
 
+const options = ["Finance", "Technology", "Comics" , "Self development", "Action","Science Fiction" , "Economy"];
+
 const Form = () => {
   const dispatch = useDispatch();
     const [titleName, setTitle] = useState("");
     const [authorName, setAuthor] = useState("");
+    const [selected, setSelected] = useState(options[0]);
   const addBookHandler = (e) => {
     e.preventDefault();
     const book = {
       id: rid(),
       title: titleName,
       author: authorName,
-      category: "not categorized yet",
+      category:selected,
     };
     dispatch(addBook(book));
     setTitle("");
@@ -45,14 +48,19 @@ const Form = () => {
           />
 
           <select
-            onChange={() => {}}
+            value={selected}
+            defaultValue={"default"}
             className="inputCategories"
-            disabled
-            selected
+            onChange={(e) => setSelected(e.target.value)}
           >
-            <option value="" className="catoption">
-              Categories
+            <option className="catoption" value={"default"} disabled>
+              Category
             </option>
+            {options.map((value) => (
+              <option className="catoption" value={value} key={value}>
+                {value}
+              </option>
+            ))}
           </select>
 
           <button className="addbtn" type="submit">

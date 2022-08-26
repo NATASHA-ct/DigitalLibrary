@@ -51,13 +51,19 @@ a {
 }
 
 /* Navbar styles */
-.navbar {
+.navContainer {
   display: flex;
   height: 5.938rem;
   background-color: var(--white);
-  gap: 2.6rem;
-  align-items: center;
   padding: 0 4.25rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .mainhg {
@@ -88,37 +94,175 @@ a {
   color: var(--black);
 }
 
-.Oval {
-  width: 2.813rem;
-  height: 2.813rem;
-  margin: 0 0 0 41.5rem;
-  padding: 0.875rem;
-  border: solid 1px var(--white);
-}
-
-.Mask {
+.imgNav {
   width: 1.063rem;
   height: 1.063rem;
-  background-color: var(--azure);
+}
+
+.outerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.513rem;
+  height: 2.213rem;
+  border-radius: 48%;
+  border: solid 1.5px var(--grey);
 }
 
 /* books area */
 .allBooks {
   display: flex;
   flex-direction: column;
-  margin: 2.313rem 4.25rem;
+  margin: 2.313rem 3.25rem;
   gap: 0.938rem;
 }
 
 .bookItem {
-  display: flex;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  padding: 2rem 0 1.625rem 1.688rem;
   height: 10.625rem;
   border-radius: 4px;
   border: solid 1px var(--grey);
   background-color: var(--white);
   align-items: center;
   gap: 1em;
+}
+
+.book-area {
+  display: flex;
+}
+
+.book-btns {
+  display: flex;
+  gap: 1em;
+  margin-top: 1.313rem;
+}
+
+.category {
+  color: var(--textgrey);
+  font-family: var(--formfont);
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.title {
+  font-family: var(--bklstfont);
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.author {
+  font-family: var(--bklstfont);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.bkbtn {
+  background-color: white;
+  color: #4386bf;
+  padding-right: 0.938rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.commBtn {
+  border-right: solid 1.5px var(--grey);
+  border-radius: 0%;
+}
+
+.rmvBtn {
+  border-right: solid 1.5px var(--grey);
+  border-radius: 0%;
+}
+
+/* progress area */
+.progress {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  border-right: solid 1.5px var(--grey);
+  padding-right: 4.939rem;
+  height: 4.25rem;
+}
+
+.percentage {
+  height: 2.438rem;
+  font-family: var(--formfont);
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.completed {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-family: var(--formfont);
+  color: var(--black);
+  height: 1.125rem;
+}
+
+span[role="progressbar"] {
+  --size: 4.25rem;
+  --fg: #307bbe;
+  --bg: #e8e8e8;
+  --pgPercentage: var(--value);
+
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+/* chapter area */
+.chapter-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: flex-end;
+  padding-left: 3.688rem;
+  margin-right: 2em;
+}
+
+.chapter {
+  width: 7.875rem;
+  opacity: 0.5;
+  font-family: var(--bklstfont);
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.chapter-number {
+  width: 4.688rem;
+  height: 1.313rem;
+  font-family: var(--bklstfont);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: var(--black);
+  margin-bottom: 1.438rem;
+}
+
+.progressBtn {
+  width: 11rem;
+  height: 1.7rem;
+  padding: 0.4rem 1.188rem 0.4rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  font-family: var(--bklstfont);
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
 /* Form area */
@@ -161,7 +305,7 @@ input::placeholder {
 .inputTittle,
 .inputAuthor,
 .inputCategories {
-  height: 2.813rem;
+  height: 2.513rem;
   border-radius: 4px;
   border: solid 1px var(--grey);
   background-color: var(--white);
@@ -189,6 +333,10 @@ button {
   width: 11.5rem;
   font-size: 0.813rem;
   font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--grey);
 }
 
 /* category page */
