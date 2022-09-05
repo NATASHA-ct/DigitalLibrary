@@ -1,6 +1,6 @@
 # Digital Library
 
-The Bookstore is a website , it allows the user to: Display a list of books. Add a book. Remove a selected book.
+The Digital Library is a webapp that allows the user to: Display a list of books. Add a new book. Remove a selected book.It has been developed using React Redux and tested using Jest.
 
 ## Built With
 
