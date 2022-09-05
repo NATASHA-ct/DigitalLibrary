@@ -5,7 +5,7 @@ import userProfile from '../assets/userprofile.png';
 const Navbar = () => (
   <div className="navContainer">
     <div className="navbar">
-      <h1 className="mainhg">Bookstore CMS</h1>
+      <h1 className="mainhg">Digital Library</h1>
       <NavLink className="navbook" to="/">
         BOOKS
       </NavLink>
