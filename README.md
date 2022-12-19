@@ -9,7 +9,7 @@ The Digital Library is a webapp that allows the user to: Display a list of books
 - JavaScrpt
 - REACT
 
-## Live Demo in progress , web app to be deployed...()
+## Live Demo 
 
 [Live Demo Link](https://deft-seahorse-76e953.netlify.app/)
 
