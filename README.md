@@ -1,6 +1,6 @@
 # Digital Library
 
-The Digital Library is a webapp that allows the user to display a list of books, add a new book and remove a selected book.It has been developed using React Redux and tested using Jest.
+A web application developed using React and Redux that allows users to view a list of books, add new books, and remove selected books. The application has been tested using Jest. It provides users with a simple and convenient way to manage their book collection.
 
 ## Built With
 
